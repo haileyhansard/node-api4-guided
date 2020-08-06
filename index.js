@@ -1,7 +1,7 @@
 require('dotenv').config();
 const server = require("./api/server.js");
 
-server.get('/', (req,res) {
+server.get('/', (req, res) => {
   const message = process.env.MESSAGE || "hello from code";
   res.status(200).json({ message, database: process.env.DB_NAME })
 });
